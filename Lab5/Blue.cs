@@ -141,6 +141,7 @@ namespace Lab5
 
             // code here
 
+	    if (matrix.GetLength(0) != matrix.GetLength(1) || k>=matrix.GetLength(0)) return;
 	    int n = Math.Min(matrix.GetLength(0), matrix.GetLength(1));
 	    int mrow = 0;
 	    //if (matrix.GetLength(0) != matrix.GetLength(1)){ throw new ArgumentException("matrix is not square"); return;}
@@ -169,6 +170,8 @@ namespace Lab5
         {
 
             // code here
+
+	    if (matrix.GetLength(1))
 
             // end
 
