@@ -110,13 +110,14 @@ namespace Lab5
 		}
 	      }
 	    }
-	    else{
+	    /*else{
 	      for (int j = 0; j < imax; j++){
 		if (matrix[i, j] < 0){
 		  matrix[i, j] = 0;
 		}
 	      }
 	    }
+	    */
 	  }
 
 	  // end
@@ -329,18 +330,18 @@ namespace Lab5
 
             // code here
 
-	  int n0 = A.GetLength(1);
-	  int m0 = A.GetLength(0);
-	  int n1 = B.GetLength(1);
-	  int m1 = B.GetLength(0);
+	  int n0 = A.GetLength(0);
+	  int m0 = A.GetLength(1);
+	  int n1 = B.GetLength(0);
+	  int m1 = B.GetLength(1);
 
-	  if (n0!=m1) return answer;
+	  if (m0!=n1) return answer;
 
 	  answer = new int[n0, m1];
 
 	  for (int i = 0; i < n0; i++){
-	    for (int j = 0; j < n0; j++){
-	      for (int k = 0; k < n0; k++){
+	    for (int j = 0; j < m1; j++){
+	      for (int k = 0; k < n1; k++){
 		answer[i, j] += A[i, k] * B[k, j];
 	      }
 	    }
@@ -356,6 +357,26 @@ namespace Lab5
 
             // code here
 
+
+	    int n = matrix.GetLength(0);
+	    int m = matrix.GetLength(1);
+	    answer = new int[n][];
+	    for (int i = 0; i < n; i++){
+	      int count = 0;
+	      for (int j = 0; j < m; j++){
+		if (matrix[i, j] > 0){
+		  count++;
+		}
+	      }
+	      answer[i] = new int[count];
+	      int done = 0;
+	      for (int j = 0; j < m; j++){
+		if (matrix[i, j] > 0){
+		  answer[i][done++] = matrix[i, j];
+		}
+	      }
+	    }
+
             // end
 
             return answer;
@@ -365,6 +386,33 @@ namespace Lab5
             int[,] answer = null;
 
             // code here
+	    int id = 0;
+	    for (int i = 0; i < array.Length; i++){
+	      id += array[i].Length;
+	    }
+	    int n = 0;
+	    for (; n * n < id; n++){}
+	    
+	    answer = new int[n, n];
+	    int done = 0;
+	    for (int i = 0; i < array.Length; i++){
+	      for (int j = 0; j < array[i].Length; j++){
+		answer[done/n, done%n] = array[i][j];
+		done++;
+		//answer[i%n, j%n] = array[i][j];
+	      }
+	    }
+	    /*
+	    string output = Convert.ToString(n) + '\n'; 
+	    for (int i = 0; i < n; i++){
+	      for (int j = 0; j < n; j++){
+		output += Convert.ToString(answer[i, j]) + ' ';
+	      }
+	      output+='\n';
+	    }
+	    throw new Exception(output);
+*/
+
 
             // end
 
