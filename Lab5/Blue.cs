@@ -171,7 +171,7 @@ namespace Lab5
 
             // code here
 
-	    if (matrix.GetLength(1))
+	    //if (matrix.GetLength(1))
 
             // end
 
