@@ -6,6 +6,8 @@ namespace Lab5
     {
         public static void Main()
         {
+            Purple purple = new Purple();
+            
         }
     }
 }
