@@ -1,15 +1,16 @@
 using System.Linq;
 using System.Runtime.InteropServices;
 
-namespace lap5;
+namespace Lab5
 
 public class Blue
 {
     public double[] Task1(int[,] matrix)
     {
+        double[] answer = null;
         int rows = matrix.GetLength(0);
         int cols = matrix.GetLength(1);
-        double[] answer = new double[rows];
+
 
         for (int i = 0; i < rows; i++)
         {
@@ -30,6 +31,7 @@ public class Blue
 
     public int[,] Task2(int[,] matrix)
     {
+        int[,] answer = null;
         int rows = matrix.GetLength(0);
         int cols = matrix.GetLength(1);
 
@@ -45,7 +47,7 @@ public class Blue
                     maxCol = j;
                 }
 
-        int[,] result = new int[rows - 1, cols - 1];
+        
         int rIdx = 0;
 
         for (int i = 0; i < rows; i++)
@@ -55,12 +57,12 @@ public class Blue
             for (int j = 0; j < cols; j++)
             {
                 if (j == maxCol) continue;
-                result[rIdx, cIdx] = matrix[i, j];
+                answer[rIdx, cIdx] = matrix[i, j];
                 cIdx++;
             }
             rIdx++;
         }
-        return result;
+        return answer;
     }
 
     public void Task3(int[,] matrix)
@@ -101,9 +103,11 @@ public class Blue
 
     public int[,] Task4(int[,] matrix)
     {
+        int[,] answer = null;
+
         int rows = matrix.GetLength(0);
         int cols = matrix.GetLength(1);
-        int[,] result = new int[rows, cols + 1];
+        
 
         for (int i = 0; i < rows; i++)
         {
@@ -116,21 +120,22 @@ public class Blue
 
             for (int j = 0; j < cols - 1; j++)
             {
-                result[i, j] = matrix[i, j];
+                answer[i, j] = matrix[i, j];
             }
 
-      
-            result[i, cols - 1] = maxVal;
 
-           
-            result[i, cols] = matrix[i, cols - 1];
+            answer[i, cols - 1] = maxVal;
+
+
+            answer[i, cols] = matrix[i, cols - 1];
         }
 
-        return result;
+        return answer;
     }
 
     public int[] Task5(int[,] matrix)
     {
+        int[] answer = null;
         int rows = matrix.GetLength(0);
         int cols = matrix.GetLength(1);
 
@@ -140,7 +145,7 @@ public class Blue
                 if ((i + j) % 2 == 1)
                     size++;
 
-        int[] answer = new int[size];
+       
         int index = 0;
         for (int i = 0; i < rows; i++)
             for (int j = 0; j < cols; j++)
@@ -322,7 +327,7 @@ public class Blue
             counts[i] = countPos;
         }
 
-       
+
         for (int i = 0; i < rows - 1; i++)
             for (int j = i + 1; j < rows; j++)
             {
@@ -344,6 +349,8 @@ public class Blue
 
     public int[][] Task12(int[][] array)
     {
+        int[][] answer = null;
+        
         int totalSum = 0, totalCount = 0;
         for (int i = 0; i < array.Length; i++)
             for (int j = 0; j < array[i].Length; j++)
@@ -366,7 +373,7 @@ public class Blue
                 newSize++;
         }
 
-        int[][] result = new int[newSize][];
+        
         int index = 0;
         for (int i = 0; i < array.Length; i++)
         {
@@ -377,9 +384,9 @@ public class Blue
             double avgRow = (double)sumRow / array[i].Length;
             if (avgRow >= totalAvg)
             {
-                result[index++] = array[i];
+                answer[index++] = array[i];
             }
         }
-        return result;
+        return answer;
     }
 }
