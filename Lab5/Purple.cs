@@ -114,11 +114,14 @@ namespace Lab5
             // code here
             int x = matrix.GetLength(0);
             int y = matrix.GetLength(1);
-            int[] h = new int[x];
-            int term = 0;
+            
             int mx = int.MinValue;
             for (int i = 0; i < x; i++)
             {
+                mx = int.MinValue;
+                int s = 0;
+                int term = 0;
+                int k = 0;
                 for (int j = 0; j < y; j++)
                 {
                     if (matrix[i, j] > mx)
@@ -127,15 +130,7 @@ namespace Lab5
                         term = j;
                     }
                 }
-                h[i] = term;
-                mx = int.MinValue;
-            }
-            int[] sred = new int[x];
-            for (int i = 0; i < x; i++)
-            {
-                int s = 0;
-                int k = 0;
-                for (int j = h[i] + 1; j < y; j++)
+                for (int j = term + 1; j < y; j++)
                 {
                     if (matrix[i, j] > 0)
                     {
@@ -143,18 +138,18 @@ namespace Lab5
                         k++;
                     }
                 }
-                if (k > 0) sred[i] = (int)(s / k);
-                else sred[i] = 0;
-            }
-            for (int i = 0; i < x; i++)
-            {
-                 for (int j = 0; j < h[i]; j++)
-                 {
-                    if (matrix[i, j] < 0)
+                if (k > 0)
+                {
+                    int sred = (int)(s / k);
+
+                    for (int j = 0; j < term; j++)
                     {
-                         matrix[i, j] = sred[i];
+                        if (matrix[i, j] < 0)
+                        {
+                            matrix[i, j] = sred;
+                        }
                     }
-                 }
+                }
             }
             
             // end
