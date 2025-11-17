@@ -318,9 +318,13 @@ namespace Lab5
 
             answer = new int[aRow, bCol];
             for (var row = 0; row < aRow; row++)
+            {
                 for (int col = 0; col < bCol; col++)
+                {
                     for (int i = 0; i < aRow; i++)
                         answer[row, col] += A[row, i] * B[i, col];
+                }
+            }
             // end
 
             return answer;
@@ -333,9 +337,11 @@ namespace Lab5
             // code here
             var arrayCountNegativeAndZeroInRows = new int[matrix.GetLength(0)];
             for (var row = 0; row < matrix.GetLength(0); row++)
+            {
                 for (var col = 0; col < matrix.GetLength(1); col++)
                     if (matrix[row, col] <= 0)
                         arrayCountNegativeAndZeroInRows[row]++;
+            }
 
             answer = new int[matrix.GetLength(0)][];
             for (var row = 0; row < matrix.GetLength(0); row++)
@@ -366,40 +372,20 @@ namespace Lab5
             int[] allElements = new int[countElems];
             int idx = 0;
             for (int i = 0; i < array.Length; i++)
+            {
                 for (int j = 0; j < array[i].Length; j++)
                     allElements[idx++] = array[i][j];
+            }
 
             idx = 0;
             for (int row = 0; row < n; row++)
+            {
                 for (int col = 0; col < n; col++)
                     answer[row, col] = idx < countElems ? allElements[idx++] : 0;
+            }
             // end
 
             return answer;
         }
     }
 }
-
-// var maxRowLength = array[0].Length;
-// for (var row = 0; row < array.Length; row++)
-//     if (array[row].Length > maxRowLength)
-//         maxRowLength = array[row].Length;
-//
-// var n = Math.Max(array.Length, maxRowLength);
-// answer = new int[n, n];
-// for (var row = 0; row < n; row++)
-// for (var col = 0; col < n; col++)
-// {
-//     if (row < array.Length && col < array[row].Length)
-//         answer[row, col] = array[row][col];
-//     else
-//         answer[row, col] = 0;
-// }
-//             
-// for (int row = 0; row < answer.GetLength(0); row++)
-// {
-//     for (int col = 0; col < answer.GetLength(1); col++)
-//         Console.Write($"{answer[row, col],3} ");
-//     Console.WriteLine();
-// }
-// Console.WriteLine();
