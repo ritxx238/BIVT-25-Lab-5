@@ -355,7 +355,13 @@ namespace Lab5
         public int[,] Task12(int[][] array)
         {
             int[,] answer = null;
-            int[] arr = new int[array.Sum(row => row.Length)];
+            int cnt = 0;
+            for (int i = 0; i < array.Length; i++)
+            {
+                cnt += array[i].Length;
+            }
+
+            int[] arr = new int[cnt];
             int k = 0;
             foreach (int[] i in array)
             {
