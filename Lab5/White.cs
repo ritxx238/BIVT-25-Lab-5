@@ -264,10 +264,12 @@ namespace Lab5
             int[,] answer = null;
 
             // code here
-            List<int[]> rowsWithoutZeros = new List<int[]>();
+            int rowCount = matrix.GetLength(0);
             int colCount = matrix.GetLength(1);
 
-            for (int i = 0; i < matrix.GetLength(0); i++)
+            // Сначала посчитаем сколько строк без нулей
+            int countWithoutZeros = 0;
+            for (int i = 0; i < rowCount; i++)
             {
                 bool hasZero = false;
                 for (int j = 0; j < colCount; j++)
@@ -278,23 +280,38 @@ namespace Lab5
                         break;
                     }
                 }
-                if (!hasZero)
-                {
-                    int[] row = new int[colCount];
-                    for (int j = 0; j < colCount; j++)
-                        row[j] = matrix[i, j];
-                    rowsWithoutZeros.Add(row);
-                }
+                if (!hasZero) countWithoutZeros++;
             }
 
-            if (rowsWithoutZeros.Count == 0)
+            // Создаем результирующую матрицу
+            if (countWithoutZeros == 0)
+            {
                 answer = new int[0, colCount];
+            }
             else
             {
-                answer = new int[rowsWithoutZeros.Count, colCount];
-                for (int i = 0; i < rowsWithoutZeros.Count; i++)
+                answer = new int[countWithoutZeros, colCount];
+                int newRow = 0;
+
+                for (int i = 0; i < rowCount; i++)
+                {
+                    bool hasZero = false;
                     for (int j = 0; j < colCount; j++)
-                        answer[i, j] = rowsWithoutZeros[i][j];
+                    {
+                        if (matrix[i, j] == 0)
+                        {
+                            hasZero = true;
+                            break;
+                        }
+                    }
+
+                    if (!hasZero)
+                    {
+                        for (int j = 0; j < colCount; j++)
+                            answer[newRow, j] = matrix[i, j];
+                        newRow++;
+                    }
+                }
             }
             // end
 
