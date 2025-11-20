@@ -1,4 +1,4 @@
-﻿namespace Lab5test
+﻿﻿namespace Lab5test
 {
     internal class Data
     {
