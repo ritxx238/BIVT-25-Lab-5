@@ -1,0 +1,17 @@
+2025-11-15T16:25:28.6945228+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Version: 1.4.3+c252b64ad913ea9411fc5d17bfd5580d2d061497
+2025-11-15T16:25:28.7104956+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging mode: asynchronous
+2025-11-15T16:25:28.7125211+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging level: Information
+2025-11-15T16:25:28.7125400+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION CreateBuilderAsync entry time: 16:25:28.650
+2025-11-15T16:25:28.7149435+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION PID: 8155
+2025-11-15T16:25:28.7152332+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime information: ubuntu.24.04-x64 - .NET 8.0.21
+2025-11-15T16:25:28.7152727+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime location: /usr/lib/dotnet/shared/Microsoft.NETCore.App/8.0.21/System.Private.CoreLib.dll
+2025-11-15T16:25:28.7152947+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION IsDynamicCodeSupported: True
+2025-11-15T16:25:28.7153019+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Test module: /home/astracelebrities/BIVT-25-Lab-5/Lab5test/bin/Debug/net8.0/Lab5test.dll
+2025-11-15T16:25:28.7158360+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Command line arguments: '--server --diagnostic --diagnostic-verbosity Information --diagnostic-output-directory /home/astracelebrities/BIVT-25-Lab-5/Lab5test/bin/Debug/net8.0/Log --client-port 35707'
+2025-11-15T16:25:28.7184600+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION TESTINGPLATFORM_DEFAULT_HANG_TIMEOUT: ''
+2025-11-15T16:25:28.7568885+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting RegisterEnvironmentVariablesConfigurationSource: 'True'
+2025-11-15T16:25:28.7644346+00:00 Microsoft.Testing.Platform.Configurations.JsonConfigurationSource+JsonConfigurationProvider INFORMATION Config file '/home/astracelebrities/BIVT-25-Lab-5/Lab5test/bin/Debug/net8.0/Lab5test.testconfig.json' not found.
+2025-11-15T16:25:28.7677144+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting PlatformExitProcessOnUnhandledException: 'False', config file: False environment variable:  VSTest mode: False
+2025-11-15T16:25:29.0751006+00:00 Microsoft.Testing.Platform.Requests.TestHostTestFrameworkInvoker INFORMATION Test framework UID: 'MSTestExtension' Version: '3.6.4' DisplayName: 'MSTest' Description: 'MSTest Framework for Microsoft Testing Platform'
+2025-11-15T16:25:29.1122867+00:00 Microsoft.Testing.Extensions.VSTestBridge.ObjectModel.MessageLoggerAdapter WARNING Сборщики данных Runsettings не поддерживаются в Microsoft.Testing.Platform и будут пропущены
+2025-11-15T16:25:29.2908372+00:00 Microsoft.Testing.Extensions.VSTestBridge.ObjectModel.MessageLoggerAdapter INFORMATION Test Parallelization enabled for /home/astracelebrities/BIVT-25-Lab-5/Lab5test/bin/Debug/net8.0/Lab5test.dll (Workers: 1, Scope: MethodLevel)

@@ -1,0 +1,15 @@
+/home/astracelebrities/BIVT-25-Lab-5/Lab5/bin/Debug/net8.0/Lab5
+/home/astracelebrities/BIVT-25-Lab-5/Lab5/bin/Debug/net8.0/Lab5.deps.json
+/home/astracelebrities/BIVT-25-Lab-5/Lab5/bin/Debug/net8.0/Lab5.runtimeconfig.json
+/home/astracelebrities/BIVT-25-Lab-5/Lab5/bin/Debug/net8.0/Lab5.dll
+/home/astracelebrities/BIVT-25-Lab-5/Lab5/bin/Debug/net8.0/Lab5.pdb
+/home/astracelebrities/BIVT-25-Lab-5/Lab5/obj/Debug/net8.0/Lab5.GeneratedMSBuildEditorConfig.editorconfig
+/home/astracelebrities/BIVT-25-Lab-5/Lab5/obj/Debug/net8.0/Lab5.AssemblyInfoInputs.cache
+/home/astracelebrities/BIVT-25-Lab-5/Lab5/obj/Debug/net8.0/Lab5.AssemblyInfo.cs
+/home/astracelebrities/BIVT-25-Lab-5/Lab5/obj/Debug/net8.0/Lab5.csproj.CoreCompileInputs.cache
+/home/astracelebrities/BIVT-25-Lab-5/Lab5/obj/Debug/net8.0/Lab5.sourcelink.json
+/home/astracelebrities/BIVT-25-Lab-5/Lab5/obj/Debug/net8.0/Lab5.dll
+/home/astracelebrities/BIVT-25-Lab-5/Lab5/obj/Debug/net8.0/refint/Lab5.dll
+/home/astracelebrities/BIVT-25-Lab-5/Lab5/obj/Debug/net8.0/Lab5.pdb
+/home/astracelebrities/BIVT-25-Lab-5/Lab5/obj/Debug/net8.0/Lab5.genruntimeconfig.cache
+/home/astracelebrities/BIVT-25-Lab-5/Lab5/obj/Debug/net8.0/ref/Lab5.dll
