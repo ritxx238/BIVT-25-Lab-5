@@ -112,33 +112,33 @@ namespace Lab5
             }
         }
 
-    // end
+            // end
 
 
 public int[,] Task5(int[,] matrix)
     {
     int[,] answer = null;
 
-    // code here
-    int maxsum = 0;
-    int str = -1;
-
-    for (int i = 0; i < matrix.GetLength(0); i++)
-    {
-        int sum = 0;
-        for (int j = 0; j < matrix.GetLength(1); j++)
-        {
-            if (matrix[i, j] > 0)
+            // code here
+            int maxsum = 0;
+            int str = -1;
+        
+            for (int i = 0; i < matrix.GetLength(0); i++)
             {
-                sum += matrix[i, j];
+                int sum = 0;
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    if (matrix[i, j] > 0)
+                    {
+                        sum += matrix[i, j];
+                    }
+                }
+                if (sum > maxsum)
+                {
+                    maxsum = sum;
+                    str = i;
+                }
             }
-        }
-        if (sum > maxsum)
-        {
-            maxsum = sum;
-            str = i;
-        }
-    }
 
             answer = new int[matrix.GetLength(0) - 1, matrix.GetLength(1)];
             for (int i = 0; i < answer.GetLength(0); i++)
@@ -282,7 +282,7 @@ public int[,] Task5(int[,] matrix)
                 matrix[i, 0] = 0;
                 // Правая сторона
                 matrix[i, n - 1] = 0;
-                // end
+            // end
             }
         }
         public (int[] A, int[] B) Task10(int[,] matrix)
